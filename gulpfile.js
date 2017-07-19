@@ -5,6 +5,7 @@ const browserSync = require('browser-sync').create();
 const del = require('del');
 const wiredep = require('wiredep').stream;
 const runSequence = require('run-sequence');
+const concat = require('gulp-concat');
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
@@ -44,6 +45,7 @@ gulp.task('scripts', () => {
     .pipe($.plumber())
     .pipe($.if(dev, $.sourcemaps.init()))
     .pipe($.babel())
+    .pipe(concat('bundle.js'))
     .pipe($.if(dev, $.sourcemaps.write('.')))
     .pipe(gulp.dest('.tmp/scripts'))
     .pipe(reload({stream: true}));
