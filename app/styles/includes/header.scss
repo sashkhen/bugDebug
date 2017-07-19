@@ -1,5 +1,13 @@
 .header {
-  height: 164px;
   background-color: $rouge;
   color: $white;
+
+  .primary,
+  .secondary {
+    padding: 25px 0;
+  }
+
+  .secondary {
+    background-color: rgba($black, .2);
+  }
 }
