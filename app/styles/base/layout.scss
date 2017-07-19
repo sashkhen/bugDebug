@@ -1,0 +1,29 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header,
+.footer {
+  flex: 0 0 auto;
+}
+
+.content {
+  flex: 1 1 auto;
+}
+
+.container {
+  max-width: $widthDesktop + $paddingDesktop * 2;
+  padding: 0 $paddingDesktop;
+
+  @include tablet {
+    max-width: 100%;
+    padding: 0 $paddingTablet;
+  }
+
+  @include mobile {
+    max-width: 100%;
+    padding: 0 $paddingMobile;
+  }
+}

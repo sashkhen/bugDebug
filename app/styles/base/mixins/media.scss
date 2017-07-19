@@ -1,0 +1,11 @@
+@mixin tablet {
+  @media (min-width: #{$mobileWidth + 1px}) and (max-width: #{$tabletWidth}) and (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$mobileWidth}) {
+    @content;
+  }
+}
