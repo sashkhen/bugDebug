@@ -1,11 +1,13 @@
 // bower:scss
 // endbower
 
+@import 'icomoon';
 @import 'base/variables';
 @import 'base/colors';
 @import 'base/mixins/index';
 @import 'base/common';
 @import 'base/layout';
 @import 'includes/header';
+@import 'includes/searchBar';
 @import 'includes/footer';
 @import 'includes/content';

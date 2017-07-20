@@ -1,13 +1,39 @@
 .header {
-  background-color: $rouge;
-  color: $white;
+  background-color: $grayLight;
+  color: $grayish;
 
-  .primary,
-  .secondary {
-    padding: 25px 0;
+  .primary {
+    padding: 40px 0;
   }
 
   .secondary {
-    background-color: rgba($black, .2);
+    padding: 30px 0;
+    background-color: $grayMedium;
+    text-transform: uppercase;
+    font-size: 22px;
+    letter-spacing: 1px;
+
+    .wrapper {
+      display: flex;
+      flex-wrap: nowrap;
+    }
+  }
+
+  .categories {
+    flex: 1 1 auto;
+
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+
+    overflow: hidden;
+
+    .category {
+      .link {
+        &:hover {
+          color: $grayishBrown;
+        }
+      }
+    }
   }
 }

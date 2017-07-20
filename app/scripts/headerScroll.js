@@ -51,7 +51,7 @@ $(document).ready(function() {
 
     var scrollPos = $(window).scrollTop();
     var atPageTop = scrollPos <= MIN_SCROLL;
-    var needsUpdate = hidden && atPageTop || !hidden && !atPageTop;
+    var needsUpdate = hidden === atPageTop;
 
     if (needsUpdate) updateVisibilityTo(atPageTop);
   };

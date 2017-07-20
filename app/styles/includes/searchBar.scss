@@ -1,0 +1,54 @@
+.searchBar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  overflow: hidden;
+
+  &.active {
+    .toggler {
+      color: $grayishBrown;
+    }
+
+    .inputWrapper {
+      display: flex;
+    }
+  }
+
+  .toggler {
+    flex: 0 0 auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .icon {
+      transition: color .3s ease-out;
+    }
+
+    &:hover {
+      .icon {
+        color: $grayishBrown;
+      }
+    }
+  }
+
+  .inputWrapper {
+    flex: 1 1 auto;
+
+    display: none;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    .input {
+      flex: 1 1 auto;
+      background-color: transparent;
+      border: none;
+      color: $grayishBrown;
+      caret-color: $grayish;
+
+      &::placeholder {
+        color: $grayish;
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+<ul class="categories">
+  {% block content %}
+    {% for category in categories %}
+      <li class="category">
+        <a href={{category.link}} class="link">{{category.name}}</a>
+      </li>
+    {% endfor %}
+  {% endblock %}
+</ul>

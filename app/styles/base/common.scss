@@ -16,3 +16,32 @@ p,
 span {
   margin: 0,
 }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+li {
+  display: inline-block;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  transition: color .3s ease-out;
+}
+
+button,
+a,
+input,
+textarea {
+  outline: none;
+  font-family: $fontPrimary;
+}
