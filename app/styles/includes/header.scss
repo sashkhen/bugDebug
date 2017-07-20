@@ -2,37 +2,43 @@
   background-color: $grayLight;
   color: $grayish;
 
-  .primary {
+  .h--primary {
     padding: 40px 0;
   }
 
-  .secondary {
+  .h--secondary {
     padding: 30px 0;
     background-color: $grayMedium;
     text-transform: uppercase;
     font-size: 22px;
     letter-spacing: 1px;
 
-    .wrapper {
+    .h--secondary__wrapper {
       display: flex;
       flex-wrap: nowrap;
+    }
+
+    .h--secondary__item {
+      flex: 1 1 auto;
+    }
+
+    .h--secondary__item--fixed {
+      flex: 0 0 auto;
     }
   }
 
   .categories {
-    flex: 1 1 auto;
-
     display: flex;
     justify-content: space-around;
     flex-wrap: nowrap;
 
     overflow: hidden;
 
-    .category {
-      .link {
-        &:hover {
-          color: $grayishBrown;
-        }
+    .categories__item {}
+
+    .categories__link {
+      &:hover {
+        color: $grayishBrown;
       }
     }
   }

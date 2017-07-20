@@ -2,11 +2,11 @@ $(window).load(function() {
 
   var DURATION = 300;
 
-  var blogNav = $('.header .secondary');
-  var categories = blogNav.find('.categories');
-  var searchBar = blogNav.find('.searchBar');
-  var toggler = searchBar.find('.toggler');
-  var input = searchBar.find('.input');
+  var blogNav = $('.js-blog-nav');
+  var categories = blogNav.find('.js-categories');
+  var searchBar = blogNav.find('.js-search');
+  var toggler = searchBar.find('.js-toggler');
+  var input = searchBar.find('.js-input');
 
   var categoriesInitialWidth = categories.outerWidth();
   var togglerWidth = searchBar.width();
@@ -27,7 +27,7 @@ $(window).load(function() {
     const categoriesWidth = isActive ? categoriesInitialWidth : 0;
     const searchWidth = isActive ? togglerWidth : '100%';
 
-    searchBar[action]('active');
+    searchBar[action]('js-active');
     updateWidth(categories, categoriesWidth);
     updateWidth(searchBar, searchWidth, activateSearch);
 

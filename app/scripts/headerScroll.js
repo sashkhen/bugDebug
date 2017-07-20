@@ -4,9 +4,9 @@ $(document).ready(function() {
   var MIN_SCROLL = 10;
   var OFFSET_PROP = 'marginTop';
 
-  var header = $('.header');
-  var primary = header.find('.primary');
-  var secondary = header.find('.secondary');
+  var header = $('.js-header');
+  var primary = header.children().first();
+  var secondary = header.children().last();
   var content = header.next();
 
   var headerHeight = header.outerHeight();

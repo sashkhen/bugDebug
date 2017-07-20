@@ -1,8 +1,8 @@
-<ul class="categories">
+<ul class="categories h--secondary__item js-categories">
   {% block content %}
     {% for category in categories %}
-      <li class="category">
-        <a href={{category.link}} class="link">{{category.name}}</a>
+      <li class="categories__item">
+        <a href={{category.link}} class="categories__link">{{category.name}}</a>
       </li>
     {% endfor %}
   {% endblock %}

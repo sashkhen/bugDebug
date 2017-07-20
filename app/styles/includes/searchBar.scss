@@ -1,22 +1,20 @@
-.searchBar {
+.search-bar {
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
   overflow: hidden;
 
-  &.active {
-    .toggler {
+  &.js-active {
+    .s__toggler:first-child {
       color: $grayishBrown;
     }
 
-    .inputWrapper {
+    .input--search {
       display: flex;
     }
   }
 
-  .toggler {
-    flex: 0 0 auto;
-
+  .s__toggler {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,14 +30,14 @@
     }
   }
 
-  .inputWrapper {
+  .input--search {
     flex: 1 1 auto;
 
     display: none;
     justify-content: flex-start;
     align-items: stretch;
 
-    .input {
+    .input--search__field {
       flex: 1 1 auto;
       background-color: transparent;
       border: none;
