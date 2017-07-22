@@ -36,6 +36,10 @@ a {
   text-decoration: none;
   color: inherit;
   transition: color .3s ease-out;
+
+  &:hover {
+    color: $rouge;
+  }
 }
 
 button,

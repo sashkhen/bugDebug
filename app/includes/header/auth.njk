@@ -1,0 +1,9 @@
+<div class="auth h--primary__item">
+  {% if data.auth.loggedIn %}
+    <a href="#" class="auth__link">{{data.auth.signOut}}</a>
+  {% else %}
+    <a href="#" class="auth__link">{{data.auth.signIn}}</a>
+      |
+    <a href="#" class="auth__link">{{data.auth.signUp}}</a>
+  {% endif %}
+</div>
