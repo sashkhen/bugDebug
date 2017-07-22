@@ -1,0 +1,18 @@
+{% set data = {
+  logo: {
+    image: 'images/logo.svg',
+    text: 'bugDebug'
+  }
+} %}
+
+<footer class="footer">
+  <div class="container">
+    <div class="logo footer__item">
+      <img src={{data.logo.image}} alt={{data.logo.text}} class="logo__image">
+    </div>
+    {% include "./navigation.njk" %}
+    <div class="footer__item">
+      <p>Copyright Lorem ipsum dolor sit amet.</p>
+    </div>
+  </div>
+</footer>

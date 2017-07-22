@@ -1,4 +1,25 @@
 .footer {
+  padding: 40px 0;
   background-color: $grayishBrown;
   color: $white;
+
+  .footer__item {
+    display: block;
+    width: 100%;
+    margin: 0 0 40px;
+    text-align: center;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  .navigation {
+    display: flex;
+    justify-content: space-around;
+
+    .navigation__item {
+      text-transform: uppercase;
+    }
+  }
 }
