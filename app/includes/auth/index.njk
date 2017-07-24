@@ -1,0 +1,27 @@
+{% set tabs = [
+  {
+    name: 'Sign In',
+    content: './signin.njk'
+  },
+  {
+    name: 'Sign Up',
+    content: './signup.njk'
+  }
+] %}
+
+<div class="popup">
+  <div class="popup__container js-auth">
+    <div class="popup__controls">
+      {% for tab in tabs %}
+        <div class="controls__item js-tab {{loop.index}}" data-id="{{loop.index}}">{{tab.name}}</div>
+      {% endfor %}
+    </div>
+    <div class="popup__content">
+      {% for tab in tabs %}
+        <div class="content__item js-content">
+          {% include tab.content %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

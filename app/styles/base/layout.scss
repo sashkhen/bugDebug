@@ -1,4 +1,6 @@
 .layout {
+  position: relative;
+  z-index: 0;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -8,6 +10,7 @@
 .header,
 .footer {
   flex: 0 0 auto;
+  z-index: 1;
 }
 
 .content {
@@ -15,7 +18,9 @@
 }
 
 .container {
+  position: relative;
   max-width: $widthDesktop + $paddingDesktop * 2;
+  margin: 0 auto;
   padding: 0 $paddingDesktop;
 
   @include tablet {
