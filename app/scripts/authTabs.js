@@ -1,8 +1,8 @@
 $(document).ready(function() {
 
-  var auth = $('.js-auth');
-  var controls = auth.find('.js-tab');
-  var contents = auth.find('.js-content');
+  var tabs = $('.js-tabs');
+  var controls = tabs.find('.js-tab');
+  var contents = tabs.find('.js-content');
 
   controls.click(handleClick);
 

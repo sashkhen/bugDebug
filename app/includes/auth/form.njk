@@ -1,0 +1,21 @@
+<div class="auth--form__wrapper">
+  <form class="auth--form">
+    {% for field in form.fields %}
+      <div class="auth--form__field">
+        <input
+          type="{{field.type or 'text'}}"
+          class="auth--form__input"
+          placeholder="{{field.placeholder}}"
+          id="{{field.id}}"
+          name="{{field.name}}"
+        />
+      </div>
+    {% endfor %}
+    <div class="auth--form__action">
+      <button type="submit"
+        class="auth--form__submit">
+        {{form.submit}}
+      </button>
+    </div>
+  </form>
+</div>

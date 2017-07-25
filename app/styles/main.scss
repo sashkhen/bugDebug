@@ -7,8 +7,9 @@
 @import 'base/mixins/index';
 @import 'base/common';
 @import 'base/layout';
-@import 'includes/header';
+@import 'includes/header/index';
 @import 'includes/searchBar';
 @import 'includes/footer';
 @import 'includes/article/index';
 @import 'includes/auth/index';
+@import 'includes/popup';

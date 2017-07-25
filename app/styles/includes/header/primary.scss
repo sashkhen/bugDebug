@@ -1,0 +1,23 @@
+.h--primary {
+  padding: 40px 0;
+}
+
+.h--primary__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.h--primary__item {
+  flex: 1 1 33.3%;
+  overflow: hidden;
+  text-align: center;
+
+  &:first-child {
+    text-align: left;
+  }
+  &:last-child {
+    text-align: right;
+  }
+}

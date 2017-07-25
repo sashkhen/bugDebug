@@ -3,7 +3,7 @@
 {% block content %}
   <div class="layout">
     {% include "includes/header/index.njk" %}
-    {% include "includes/article/index.njk" %}
+    {% block page %}{% endblock %}
     {% include "includes/footer/index.njk" %}
   </div>
   {% include "includes/auth/index.njk" %}

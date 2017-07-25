@@ -1,0 +1,18 @@
+.popup {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: rgba($black, .5);
+}
+
+.popup__container {
+  width: 100%;
+  max-width: 500px;
+  margin: 50px auto 0;
+  padding: 40px;
+  background-color: $grayLight;
+}

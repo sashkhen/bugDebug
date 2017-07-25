@@ -1,0 +1,20 @@
+.h--secondary {
+  padding: 30px 0;
+  background-color: $grayMedium;
+  text-transform: uppercase;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+.h--secondary__wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.h--secondary__item {
+  flex: 1 1 auto;
+}
+
+.h--secondary__item--fixed {
+  flex: 0 0 auto;
+}

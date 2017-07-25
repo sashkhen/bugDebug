@@ -1,0 +1,10 @@
+<div class="auth-social">
+  <p class="auth-social__heading">{{auth.heading}}</p>
+  {% for button in auth.buttons %}
+    <a href={{button.link}}
+      class="auth-social__button button-{{button.icon}}">
+      <i class="icon icon-{{button.icon}}"></i>
+      <span>{{button.text}}</span>
+    </a>
+  {% endfor %}
+</div>

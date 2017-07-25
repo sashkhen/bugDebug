@@ -1,0 +1,7 @@
+{% for tab in tabs %}
+  {% set activeClass = 'active' if loop.first else '' %}
+
+  <div class="tabs__content__item js-content {{activeClass}}">
+    {{ renderForm(tab.content) }}
+  </div>
+{% endfor %}

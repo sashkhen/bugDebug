@@ -1,27 +1,100 @@
+{% set forms = {
+  signUp: {
+    fields: [
+      {
+        id: 'signin-email',
+        name: 'email',
+        placeholder: 'Email',
+        type: 'email'
+      },
+      {
+        id: 'signin-password',
+        name: 'password',
+        placeholder: 'Create password',
+        type: 'password'
+      },
+      {
+        id: 'signin-confirm',
+        name: 'confirm',
+        placeholder: 'Confirm password',
+        type: 'password'
+      }
+    ],
+    submit: 'Sign In'
+  },
+  signIn: {
+    fields: [
+      {
+        id: 'signup-email',
+        name: 'email',
+        placeholder: 'Email',
+        type: 'email'
+      },
+      {
+        id: 'signup-password',
+        name: 'password',
+        placeholder: 'Password',
+        type: 'password'
+      }
+    ],
+    submit: 'Sign Up'
+  }
+} %}
+
 {% set tabs = [
   {
-    name: 'Sign In',
-    content: './signin.njk'
+    name: 'Sign Up',
+    content: forms.signUp
   },
   {
-    name: 'Sign Up',
-    content: './signup.njk'
+    name: 'Sign In',
+    content: forms.signIn
   }
 ] %}
 
-<div class="popup">
-  <div class="popup__container js-auth">
-    <div class="popup__controls">
-      {% for tab in tabs %}
-        <div class="controls__item js-tab {{loop.index}}" data-id="{{loop.index}}">{{tab.name}}</div>
-      {% endfor %}
-    </div>
-    <div class="popup__content">
-      {% for tab in tabs %}
-        <div class="content__item js-content">
-          {% include tab.content %}
-        </div>
-      {% endfor %}
-    </div>
-  </div>
-</div>
+{% set socialAuth = {
+  heading: 'or',
+  buttons: [
+    {
+      icon: 'facebook',
+      link: '#facebook',
+      text: 'sign up with facebook'
+    },
+    {
+      icon: 'vk',
+      link: '#vk',
+      text: 'sign up with vkontakte'
+    }
+  ]
+} %}
+
+{% macro renderForm(form) %}
+  {% include './form.njk' %}
+{% endmacro %}
+
+{% macro renderTabs(tabs) %}
+  {% include './tabControls.njk' %}
+{% endmacro %}
+
+{% macro renderContainers(tabs) %}
+  {% include './tabContainers.njk' %}
+{% endmacro %}
+
+{% macro renderSocialAuth(auth) %}
+  {% include './socialAuth.njk' %}
+{% endmacro %}
+
+{% macro renderAuth() %}
+  {% include './auth.njk' %}
+{% endmacro %}
+
+{% macro renderPopup(children) %}
+  {% include '../popup.njk' %}
+{% endmacro %}
+
+{{ renderPopup(renderAuth()) }}
+
+
+
+
+

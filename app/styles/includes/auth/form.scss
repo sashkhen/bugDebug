@@ -1,0 +1,29 @@
+.auth--form {
+  padding: 20px 0;
+
+  .auth--form__field {
+    margin: 0 auto 8px;
+  }
+
+  .auth--form__input {
+    display: block;
+    width: 100%;
+    padding: 8px 12px;
+    text-align: center;
+  }
+
+  .auth--form__action {
+    margin: 20px 0 0;
+    text-align: center;
+  }
+
+  .auth--form__submit {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 8px 40px;
+    border: none;
+    text-transform: uppercase;
+    background-color: $rouge;
+    color: $white;
+  }
+}
