@@ -1,0 +1,10 @@
+<div>
+  <p class="auth--form__separator">{{auth.heading}}</p>
+  {% for button in auth.buttons %}
+    <button
+      class="btn btn--wide btn-{{button.icon}}">
+      <i class="icon icon-{{button.icon}}"></i>
+      <span>{{button.text}}</span>
+    </button>
+  {% endfor %}
+</div>

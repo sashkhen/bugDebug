@@ -57,12 +57,10 @@
   buttons: [
     {
       icon: 'facebook',
-      link: '#facebook',
       text: 'sign up with facebook'
     },
     {
       icon: 'vk',
-      link: '#vk',
       text: 'sign up with vkontakte'
     }
   ]
@@ -73,15 +71,15 @@
 {% endmacro %}
 
 {% macro renderTabs(tabs) %}
-  {% include './tabControls.njk' %}
+  {% include './tab-controls.njk' %}
 {% endmacro %}
 
 {% macro renderContainers(tabs) %}
-  {% include './tabContainers.njk' %}
+  {% include './tab-containers.njk' %}
 {% endmacro %}
 
 {% macro renderSocialAuth(auth) %}
-  {% include './socialAuth.njk' %}
+  {% include './social-auth.njk' %}
 {% endmacro %}
 
 {% macro renderAuth() %}

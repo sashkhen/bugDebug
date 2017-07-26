@@ -1,15 +1,26 @@
 // bower:scss
 // endbower
 
+// icons
 @import 'icomoon';
+
+// base
 @import 'base/variables';
 @import 'base/colors';
 @import 'base/mixins/index';
 @import 'base/common';
 @import 'base/layout';
+
+// components
+@import 'includes/button';
 @import 'includes/header/index';
-@import 'includes/searchBar';
 @import 'includes/footer';
-@import 'includes/article/index';
-@import 'includes/auth/index';
+@import 'includes/search-bar';
 @import 'includes/popup';
+
+// views
+@import 'includes/auth/index';
+@import 'includes/article/index';
+@import 'includes/article-list/index';
+@import 'includes/manual/index';
+@import 'includes/manual-list/index';

@@ -1,0 +1,70 @@
+.btn {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+
+  box-sizing: border-box;
+  height: 40px;
+  min-width: 140px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 10px 30px; // temp
+
+  cursor: pointer;
+  user-select: none;
+  transition: box-shadow .3s ease-out; // TODO: mixin
+
+  border: none;
+  outline: none;
+
+  background-color: $rouge;
+  color: $white;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  text-align: center;
+
+  font-size: 20px;
+  line-height: 1;
+
+  -webkit-appearance: button;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+
+  span {
+    display: inline-block;
+    margin: 3px 0 0;
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  &:hover {
+    box-shadow: 0 4px 10px 0 rgba($black, .2);
+  }
+}
+
+.btn--wide {
+  display: block;
+  margin: 0 0 10px;
+  width: 100%;
+}
+
+.btn-facebook {
+  background-color: #3b5998;
+  font-size: 14px;
+}
+
+.btn-vk {
+  background-color: #507298;
+  font-size: 14px;
+}
