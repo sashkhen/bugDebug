@@ -1,0 +1,16 @@
+{% if item.comments or item.views %}
+  <div class="article__stat">
+    {% if item.comments %}
+      <div class="article__stat__item">
+        <i class="icon icon-comments"></i>
+        <span>{{ item.comments }}</span>
+      </div>
+    {% endif %}
+    {% if item.comments %}
+      <div class="article__stat__item">
+        <i class="icon icon-views"></i>
+        <span>{{ item.views }}</span>
+      </div>
+    {% endif %}
+  </div>
+{% endif %}

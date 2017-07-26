@@ -1,0 +1,18 @@
+<div class="container">
+  <ul class="grid">
+    {% for item in list %}
+
+      {% set firstOfFive = loop.index % 5 === 1 %}
+      {% set secondOfFive = loop.index % 5 === 2 %}
+
+      {% set wideItem = 'grid__item--wide' if firstOfFive else '' %}
+      {% set withBlur = 'article__preview--blurred'
+        if firstOfFive or secondOfFive else '' %}
+
+      <li class="grid__item {{ wideItem }}">
+        {% include './article-preview.njk' %}
+      </li>
+
+    {% endfor %}
+  </ul>
+</div>

@@ -1,0 +1,268 @@
+$space: 20px;
+
+
+// grid
+
+.grid {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: wrap;
+  margin: 0 -30px 30px 0; // container padding
+}
+
+.grid__item {
+  flex: 0 0 33.3%;
+  position: relative;
+  padding: 30px 30px 0 0;
+}
+
+.grid__item--wide {
+  flex: 0 0 66.6%;
+}
+
+
+// article preview
+
+.article__preview {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  padding: $space;
+  border: solid 1px $grayish;
+  transition: border .3s ease-out;
+
+  .article__thumb {
+    flex: 0 0 auto;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .article__thumb__blur {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to bottom, transparent, $grayLight);
+  }
+
+  .article__info {
+    position: relative;
+    flex: 0 1 auto;
+    overflow: hidden;
+  }
+
+  .article__heading {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 0 20px;
+
+    * {
+      flex: 0 0 auto;
+    }
+  }
+
+  .article__category {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: $rouge;
+    color: $grayLight;
+    font-size: 14px;
+    line-height: 1;
+  }
+
+  .article__title {
+    color: $grayishBrown;
+    font-size: inherit;
+    transition: color .3s ease-out;
+  }
+
+  .article__description {
+    margin: 10px 0 0;
+    max-height: 60px; // 3 lines
+    overflow: hidden;
+    color: $grayishBrown;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .article__credentials {
+    position: absolute;
+    bottom: 0;
+    transform: translateY(50%);
+    background-color: $grayLight;
+    text-transform: uppercase;
+    font-size: 8px;
+    line-height: 1;
+    transition: max-height .3s ease-out;
+
+    span {
+      color: $grayish;
+      transition: color .3s ease-out;
+    }
+  }
+
+  .article__stat {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 0 0 20px;
+
+    color: $grayish;
+    font-size: 12px;
+    line-height: 1;
+
+    .icon {
+      font-size: 24px;
+      line-height: 1;
+    }
+  }
+
+  .article__stat__item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 10px 0 0;
+    transition: color .3s ease-out;
+
+    &:hover {
+      color: $rouge;
+    }
+  }
+
+  .article__description,
+  .article__credentials{
+    transition: max-height .3s ease-out;
+  }
+}
+
+
+// hover
+
+.article__preview:hover {
+  border: solid 1px $rouge;
+
+  .article__title,
+  .article__credentials span {
+    color: $rouge;
+  }
+}
+
+
+// sizes
+
+.grid__item {
+  font-size: 18px;
+
+  .article__credentials {
+    padding: 0 10px;
+  }
+
+  .article__preview--blurred {
+    font-size: 24px;
+
+    .article__info {
+      padding: 0 20px 20px;
+    }
+
+    .article__credentials {
+      margin: 0 20px 20px;
+      padding: 0;
+    }
+  }
+
+  &.grid__item--wide {
+    .article__preview--blurred {
+      font-size: 36px;
+
+      .article__info {
+        padding: 0 30px 20px;
+      }
+
+      .article__credentials {
+        margin: 0 30px 20px;
+        padding: 0;
+      }
+    }
+  }
+}
+
+
+// layouts
+
+.article__preview {
+  justify-content: flex-start;
+
+  .article__thumb {
+    position: relative;
+    height: 200px;
+  }
+
+  .article__thumb__blur {
+    display: none;
+  }
+
+  .article__info {
+    padding: 15px 0 0;
+  }
+
+  .article__description,
+  .article__credentials {
+    display: block;
+  }
+
+  .article__stat {
+    display: flex;
+  }
+}
+
+.article__preview--blurred {
+  justify-content: flex-end;
+
+  .article__thumb {
+    position: absolute;
+    top: $space;
+    right: $space;
+    bottom: $space;
+    left: $space;
+    height: auto;
+  }
+
+  .article__thumb__blur {
+    display: initial;
+  }
+
+  .article__description,
+  .article__credentials,
+  .article__stat {
+    max-height: 0;
+    overflow-y: hidden;
+  }
+
+  .article__credentials {
+    position: relative;
+    background-color: transparent;
+    color: $rouge;
+  }
+
+  // hovers
+
+  &:hover {
+    .article__description {
+      display: block;
+      max-height: 60px;
+    }
+    .article__credentials {
+      display: block;
+      max-height: 24px;
+    }
+    .article__stat {
+      max-height: 24px;
+      display: flex;
+      color: $grayishBrown;
+    }
+  }
+}
