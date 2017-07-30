@@ -1,0 +1,11 @@
+<div class="container manuals__list">
+  <ul class="grid">
+    {% for item in list %}
+
+      <li class="grid__item">
+        {% include './manual-preview.njk' %}
+      </li>
+
+    {% endfor %}
+  </ul>
+</div>

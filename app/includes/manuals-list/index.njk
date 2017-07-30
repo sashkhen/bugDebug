@@ -1,1 +1,146 @@
-<div>manuals-list</div>
+{% set manualsList = [
+  {
+    title: 'Manual 1 with the very long title so you should break the line',
+    date: 'sept 12, 2016',
+    thumb: 'images/article-thumb.jpg',
+    link: 'manual.html'
+  },
+  {
+    title: 'Manual 2',
+    date: 'sept 12, 2016',
+    thumb: 'images/article-thumb.jpg',
+    link: 'manual.html'
+  },
+  {
+    title: 'Manual 3',
+    date: 'sept 12, 2016',
+    thumb: 'images/article-thumb.jpg',
+    link: 'manual.html'
+  },
+  {
+    title: 'Manual 4',
+    date: 'sept 12, 2016',
+    thumb: 'images/article-thumb.jpg',
+    link: 'manual.html'
+  },
+  {
+    title: 'Manual 5',
+    date: 'sept 12, 2016',
+    thumb: 'images/article-thumb.jpg',
+    link: 'manual.html'
+  },
+  {
+    title: 'Manual 6',
+    date: 'sept 12, 2016',
+    thumb: 'images/article-thumb.jpg',
+    link: 'manual.html'
+  },
+  {
+    title: 'Manual 7',
+    date: 'sept 12, 2016',
+    thumb: 'images/article-thumb.jpg',
+    link: 'manual.html'
+  },
+  {
+    title: 'Manual 8',
+    date: 'sept 12, 2016',
+    thumb: 'images/article-thumb.jpg',
+    link: 'manual.html'
+  },
+  {
+    title: 'Manual 9',
+    date: 'sept 12, 2016',
+    thumb: 'images/article-thumb.jpg',
+    link: 'manual.html'
+  },
+  {
+    title: 'Manual 10',
+    date: 'sept 12, 2016',
+    thumb: 'images/article-thumb.jpg',
+    link: 'manual.html'
+  },
+  {
+    title: 'Manual 10',
+    date: 'sept 12, 2016',
+    thumb: 'images/article-thumb.jpg',
+    link: 'manual.html'
+  },
+  {
+    title: 'Manual 10',
+    date: 'sept 12, 2016',
+    thumb: 'images/article-thumb.jpg',
+    link: 'manual.html'
+  },
+  {
+    title: 'Manual 10',
+    date: 'sept 12, 2016',
+    thumb: 'images/article-thumb.jpg',
+    link: 'manual.html'
+  },
+  {
+    title: 'Manual 10',
+    date: 'sept 12, 2016',
+    thumb: 'images/article-thumb.jpg',
+    link: 'manual.html'
+  },
+  {
+    title: 'Manual 10',
+    date: 'sept 12, 2016',
+    thumb: 'images/article-thumb.jpg',
+    link: 'manual.html'
+  },
+  {
+    title: 'Manual 10',
+    date: 'sept 12, 2016',
+    thumb: 'images/article-thumb.jpg',
+    link: 'manual.html'
+  },
+  {
+    title: 'Manual 10',
+    date: 'sept 12, 2016',
+    thumb: 'images/article-thumb.jpg',
+    link: 'manual.html'
+  },
+  {
+    title: 'Manual 10',
+    date: 'sept 12, 2016',
+    thumb: 'images/article-thumb.jpg',
+    link: 'manual.html'
+  },
+  {
+    title: 'Manual 10',
+    date: 'sept 12, 2016',
+    thumb: 'images/article-thumb.jpg',
+    link: 'manual.html'
+  },
+  {
+    title: 'Manual 10',
+    date: 'sept 12, 2016',
+    thumb: 'images/article-thumb.jpg',
+    link: 'manual.html'
+  },
+  {
+    title: 'Manual 10',
+    date: 'sept 12, 2016',
+    thumb: 'images/article-thumb.jpg',
+    link: 'manual.html'
+  },
+  {
+    title: 'Manual 10',
+    date: 'sept 12, 2016',
+    thumb: 'images/article-thumb.jpg',
+    link: 'manual.html'
+  },
+  {
+    title: 'Manual 10',
+    date: 'sept 12, 2016',
+    thumb: 'images/article-thumb.jpg',
+    link: 'manual.html'
+  }
+] %}
+
+{% macro renderGrid(list) %}
+  {% include './grid.njk' %}
+{% endmacro %}
+
+{{ renderGrid(manualsList) }}
