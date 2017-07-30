@@ -1,0 +1,28 @@
+.article__info {
+  position: relative;
+  z-index: 1;
+  flex: 0 1 auto;
+  overflow: hidden;
+
+  @include mobile {
+    margin: -12px 0 0;
+  }
+}
+
+@mixin info--large {
+  .article__info {
+    padding: 0 30px 20px;
+  }
+}
+
+@mixin info--medium {
+  .article__info {
+    padding: 0 20px 20px;
+  }
+}
+
+@mixin info--small {
+  .article__info {
+    padding: 15px 0 0;
+  }
+}

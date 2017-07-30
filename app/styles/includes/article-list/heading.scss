@@ -1,0 +1,14 @@
+.article__heading {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 0 20px;
+
+  * {
+    flex: 0 0 auto;
+  }
+
+  @include mobile {
+    flex-direction: column;
+  }
+}

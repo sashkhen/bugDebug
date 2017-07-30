@@ -1,11 +1,17 @@
+@mixin desktop {
+  @media only screen and (min-width: #{$tabletWidth + 1px}) {
+    @content;
+  }
+}
+
 @mixin tablet {
-  @media (min-width: #{$mobileWidth + 1px}) and (max-width: #{$tabletWidth}) and (orientation: portrait) {
+  @media only screen and (min-width: #{$mobileWidth + 1px}) and (max-width: #{$tabletWidth}) {
     @content;
   }
 }
 
 @mixin mobile {
-  @media (max-width: #{$mobileWidth}) {
+  @media only screen and (max-width: #{$mobileWidth}) {
     @content;
   }
 }

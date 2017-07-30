@@ -1,0 +1,42 @@
+.article__stat {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 0 0 20px;
+
+  color: $grayish;
+  font-size: 12px;
+  line-height: 1;
+  transition: opacity .3s ease-out;
+
+  .icon {
+    font-size: 24px;
+    line-height: 1;
+  }
+
+  @include mobile {
+    margin: 20px 0 0;
+  }
+}
+
+.article__stat__item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 10px 0 0;
+  transition: color .3s ease-out;
+
+  &:hover {
+    color: $rouge;
+  }
+}
+
+@mixin stat--visible {
+  opacity: 1;
+  color: $grayishBrown;
+}
+
+@mixin stat--hidden {
+  opacity: 0;
+  overflow-y: hidden;
+}

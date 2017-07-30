@@ -1,0 +1,97 @@
+.article__preview {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  padding: $space;
+  border: solid 1px $grayish;
+  transition: border .3s ease-out;
+
+  &:hover {
+    border: solid 1px $rouge;
+
+    .article__title,
+    .article__credentials span {
+      color: $rouge;
+    }
+
+    @include mobile {
+      border: none;
+    }
+  }
+
+  @include mobile {
+    display: block;
+    height: auto;
+    text-align: center;
+    border: none;
+  }
+}
+
+.article__thumb {
+  background-size: cover;
+  background-position: center center;
+
+  @include mobile {
+    height: 180px;
+  }
+}
+
+@mixin preview--relative {
+  justify-content: flex-start;
+}
+
+@mixin preview--absolute {
+  justify-content: flex-end;
+}
+
+@mixin thumb--absolute {
+  position: absolute;
+  top: $space;
+  right: $space;
+  bottom: $space;
+  left: $space;
+  height: auto;
+}
+
+@mixin thumb--relative {
+  position: relative;
+  height: 200px;
+}
+
+@mixin blur--visible {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, transparent, $grayLight);
+}
+
+@mixin blur--hidden {
+  display: none;
+}
+
+@mixin preview--blurred {
+  @include preview--absolute;
+
+  .article__thumb {
+    @include thumb--absolute;
+  }
+
+  .article__thumb__blur {
+    @include blur--visible;
+  }
+}
+
+@mixin preview--regular {
+  @include preview--relative;
+
+  .article__thumb {
+    @include thumb--relative;
+  }
+
+  .article__thumb__blur {
+    @include blur--hidden;
+  }
+}
