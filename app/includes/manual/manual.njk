@@ -1,5 +1,6 @@
 {% import "../share/index.njk" as share %}
 {% import "../tags/index.njk" as tags %}
+{% import "../related/index.njk" as related %}
 
 <div class="manual">
   {% include "./header.njk" %}
@@ -23,4 +24,9 @@
       {% include "./side-nav.njk" %}
     </div>
   </div>
+  {% if item.related %}
+    <div class="container">
+      {{ related.render(item.related) }}
+    <div class="container">
+  {% endif %}
 </div>

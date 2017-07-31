@@ -1,0 +1,24 @@
+.related {
+  margin: 0 0 60px;
+
+  .related__heading {
+    margin: 0 0 30px;
+    text-transform: uppercase;
+    color: $grayishBrown;
+    font-size: 18px;
+  }
+
+  .related__list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+
+    @include mobile {
+      margin: 0;
+    }
+  }
+
+  @import './item';
+}
