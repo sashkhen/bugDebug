@@ -1,0 +1,25 @@
+$size: 40px;
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon--round {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px 0 rgba($black, .2);
+  background-color: $grayLight!important;
+  transition: transform .3s ease-out;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.icon--square {
+  width: 43px;
+  height: $size;
+}

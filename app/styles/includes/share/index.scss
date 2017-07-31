@@ -1,0 +1,31 @@
+.share {
+  position: relative;
+  z-index: 1;
+  @import './counter';
+  @import './description';
+}
+
+.share__item {
+  position: relative;
+
+  .share__description {
+    max-width: 0;
+  }
+
+  &:hover {
+    .share__description {
+      max-width: 162px;
+    }
+  }
+}
+
+.share__link {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+@import './icon';
+@import './vertical';
+@import './horizontal';

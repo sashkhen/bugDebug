@@ -1,0 +1,22 @@
+{% import "../share/index.njk" as share %}
+
+<div class="manual">
+  {% include "./header.njk" %}
+  <div class="container grid">
+    {% include "./background.njk" %}
+    <div class="grid__item grid__item--fixed">
+      {{ share.render(share.shareList, 'vertical') }}
+    </div>
+    <div class="grid__item">
+      <ul class="manual__content">
+        {% for block in item.blocks %}
+          {% include "./block.njk" %}
+        {% endfor %}
+      </ul>
+      {{ share.render(share.shareList, 'horizontal') }}
+    </div>
+    <div class="grid__item grid__item--fixed">
+      {% include "./side-nav.njk" %}
+    </div>
+  </div>
+</div>

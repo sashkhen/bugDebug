@@ -1,0 +1,22 @@
+.share--horizontal {
+
+  .share__item {
+    display: inline-block;
+    margin: 0 4px 0 0;
+    box-shadow: 0 0 6px 0 rgba($black, .2);
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+  .share__link {
+    color: $grayLight;
+  }
+  .share__icon {
+    @extend .icon;
+    @extend .icon--square;
+  }
+  .share__description {
+    display: none;
+  }
+}

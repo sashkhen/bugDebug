@@ -1,0 +1,11 @@
+<div class="manual__nav">
+  <ul class="nav__list">
+    {% for block in item.blocks %}
+      <li class="nav__item">
+        <a href="#{{ block.title | replace(' ', '') | lower }}">
+          {{ loop.index }}. {{ block.title }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

@@ -1,0 +1,49 @@
+$indent: 40px;
+$size: 60px;
+
+.manual__block {
+  position: relative;
+  display: block;
+  margin: 0 0 24px;
+  padding: 20px $indent 50px;
+  border-top: 6px solid $rouge;
+  background-color: $grayLight;
+  color: $grayishBrown;
+
+  box-shadow: 0 0 10px 0 rgba($black, .1);
+}
+
+.block__counter {
+  position: absolute;
+  top: 0;
+  left: $indent;
+  width: $size;
+  height: $size;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $rouge;
+  color: $grayLight;
+  font-size: 24px;
+}
+
+.block__title {
+  margin: 0 $size 30px;
+  padding: 0 10px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.block__content {
+  font-size: 18px;
+
+  p {
+    margin: 0 0 10px;
+  }
+
+  img {
+    width: 100%;
+  }
+}

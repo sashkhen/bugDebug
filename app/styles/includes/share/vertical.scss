@@ -1,0 +1,28 @@
+.share--vertical {
+  display: none;
+  @include desktop {
+    display: block;
+  }
+
+  .share__item {
+    display: block;
+    margin: 0 30px 20px 0;
+  }
+
+  .share__link {
+    color: $grayish;
+
+    &:hover {
+      color: $rouge;
+    }
+  }
+
+  .share__icon {
+    @extend .icon;
+    @extend .icon--round;
+  }
+
+  .share__counter {
+    display: none;
+  }
+}

@@ -1,0 +1,22 @@
+<ul class="share share--{{type}}">
+  {% for item in list %}
+    <li class="share__item">
+      <div class="share__description">
+        <span>share on {{ item.icon }}</span>
+      </div>
+      <a class="share__link"
+        href={{item.link}} target="_blank">
+        <div class="share__icon"
+          style="background-color: {{ item.color }}">
+          <i class="icon icon-{{ item.icon }}"></i>
+        </div>
+        <div class="share__counter">
+          {% include './point.njk' %}
+          <span style="color: {{ item.color }}">
+            {{ item.counter }}
+          </span>
+        </div>
+      </a>
+    </li>
+  {% endfor %}
+</ul>

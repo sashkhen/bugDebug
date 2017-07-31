@@ -1,0 +1,23 @@
+.share__description {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  overflow: hidden;
+
+  border-radius: 20px;
+  box-shadow: 0 2px 10px 0 rgba($black, .2);
+  background-color: $rouge;
+  color: $white;
+
+  text-align: center;
+  white-space: nowrap;
+  font-size: 12px;
+
+  transition: max-width .3s ease-out;
+
+  span {
+    display: block;
+    padding: 8px 25px 8px 35px;
+  }
+}

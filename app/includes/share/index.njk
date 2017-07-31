@@ -1,0 +1,36 @@
+{% set shareList = [
+  {
+    icon: 'facebook',
+    link: '#facebook',
+    counter: '100',
+    color: '#3b5998'
+  },
+  {
+    icon: 'twitter',
+    link: '#twitter',
+    counter: '100',
+    color: '#1da1f2'
+  },
+  {
+    icon: 'google',
+    link: '#google',
+    counter: '100',
+    color: '#db4437'
+  },
+  {
+    icon: 'vk',
+    link: '#vk',
+    counter: '100',
+    color: '#507298'
+  },
+  {
+    icon: 'google',
+    link: '#pinterest',
+    counter: '100',
+    color: '#bd081c'
+  }
+] %}
+
+{% macro render(list, type) %}
+  {% include './template.njk' %}
+{% endmacro %}

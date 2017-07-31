@@ -1,0 +1,19 @@
+.share__counter {
+  position: relative;
+  padding: 0 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $grayLight;
+  font-size: 18px;
+
+  .point {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    fill: $grayLight;
+  }
+}

@@ -1,0 +1,16 @@
+.manual__nav {
+  display: none;
+  padding: 0 0 0 30px;
+  color: $grayishBrown;
+  font-size: 18px;
+
+  .nav__item {
+    display: block;
+    margin: 0 0 10px;
+  }
+
+  @include desktop {
+    display: block;
+    width: 330px;
+  }
+}

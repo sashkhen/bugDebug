@@ -1,0 +1,21 @@
+.grid {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  padding-top: 40px;
+
+  @include mobile {
+    padding: 0;
+  }
+}
+
+.grid__item {
+  position: relative;
+  flex: 1 1 auto;
+  overflow: visible;
+}
+
+.grid__item--fixed {
+  flex: 0 0 auto;
+}

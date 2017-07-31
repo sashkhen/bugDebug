@@ -1,1 +1,25 @@
-<div>manual</div>
+{% set manual = {
+  title: 'Manual title',
+  date: 'sept 12, 2016',
+  thumb: 'images/article-thumb.jpg',
+  blocks: [
+    {
+      title: 'First block title',
+      content: './manual-text.njk'
+    },
+    {
+      title: 'Second block title',
+      content: './manual-media.njk'
+    },
+    {
+      title: 'Third block title',
+      content: './manual-text.njk'
+    }
+  ]
+} %}
+
+{% macro renderManual(item) %}
+  {% include './manual.njk' %}
+{% endmacro %}
+
+{{ renderManual(manual) }}
