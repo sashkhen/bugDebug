@@ -1,22 +1,38 @@
-<ul class="share share--{{type}}">
-  {% for item in list %}
-    <li class="share__item">
-      <div class="share__description">
-        <span>share on {{ item.icon }}</span>
-      </div>
-      <a class="share__link"
-        href={{item.link}} target="_blank">
-        <div class="share__icon"
-          style="background-color: {{ item.color }}">
-          <i class="icon icon-{{ item.icon }}"></i>
-        </div>
-        <div class="share__counter">
-          {% include './point.njk' %}
-          <span style="color: {{ item.color }}">
-            {{ item.counter }}
-          </span>
-        </div>
-      </a>
-    </li>
-  {% endfor %}
-</ul>
+<div class="share">
+
+  {% if type === 'horizontal' %}
+    <p class="share__title">{{ shareTitle }}</p>
+  {% endif %}
+
+  <ul class="share--{{type}}">
+    {% for item in list %}
+      <li class="share__item">
+
+        {% if type === 'vertical' %}
+          <div class="share__description">
+            <span>share on {{ item.icon }}</span>
+          </div>
+        {% endif %}
+
+        <a class="share__link"
+          href={{item.link}} target="_blank">
+
+          <div class="share__icon"
+            style="background-color: {{ item.color }}">
+            <i class="icon icon-{{ item.icon }}"></i>
+          </div>
+
+          {% if type === 'horizontal' %}
+            <div class="share__counter">
+              {% include './point.njk' %}
+              <span style="color: {{ item.color }}">
+                {{ item.counter }}
+              </span>
+            </div>
+          {% endif %}
+
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

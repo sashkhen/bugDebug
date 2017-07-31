@@ -1,0 +1,32 @@
+.tags {
+  margin: 0 0 50px;
+
+  @include mobile {
+    margin: 0 20px 20px;
+  }
+
+  .tags__list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .tags__item {
+    padding: 0 10px 10px 0;
+  }
+
+  .tags__link {
+    display: block;
+    padding: 4px 10px;
+    border: 1px solid $grayishBrown;
+    color: $grayishBrown;
+    transition: border .3s ease-out, color .3s ease-out;
+    font-size: 12px;
+
+    &:hover {
+      border: 1px solid $rouge;
+      color: $rouge;
+    }
+  }
+}

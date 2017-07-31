@@ -1,5 +1,6 @@
 .share--vertical {
   display: none;
+
   @include desktop {
     display: block;
   }
