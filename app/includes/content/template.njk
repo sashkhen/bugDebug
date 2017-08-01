@@ -1,0 +1,75 @@
+{% import "../share/index.njk" as share %}
+{% import "../tags/index.njk" as tags %}
+{% import "../related/index.njk" as related %}
+
+<div class="content">
+
+  {% if type === 'manual' %}
+    {% include "./manual-header.njk" %}
+  {% else %}
+    {% include "./article-header.njk" %}
+  {% endif %}
+
+  <div class="container grid">
+    {% if type === 'manual' %}
+      {% include "./manual-background.njk" %}
+    {% endif %}
+
+    <div class="grid__item grid__item--fixed">
+      {{ share.render(share.shareList, 'vertical') }}
+    </div>
+
+    <div class="grid__item">
+
+      {% if type === 'manual' %}
+        <ul class="content__wrapper">
+          {% for block in item.blocks %}
+            {% include "./manual-block.njk" %}
+          {% endfor %}
+        </ul>
+      {% else %}
+        <div>article</div>
+      {% endif %}
+
+      {% if type !== 'manual' %}
+        <div>article authors</div>
+      {% endif %}
+
+      {% if item.tags %}
+        {{ tags.render(item.tags) }}
+      {% endif %}
+
+      {{ share.render(share.shareList, 'horizontal') }}
+
+    </div>
+
+    <div class="grid__item grid__item--fixed">
+
+      {% if type === 'manual' %}
+        {% include "./manual-side-nav.njk" %}
+      {% else %}
+        <div>advertising</div>
+      {% endif %}
+
+    </div>
+  </div>
+  {% if item.related %}
+
+    <div class="container">
+      {{ related.render(item.related) }}
+    <div class="container">
+
+  {% endif %}
+
+  {% if type !== 'manual' %}
+    <div class="container grid">
+      <div class="grid__item">
+        <div>comments</div>
+      </div>
+      <div class="grid__item grid__item--fixed">
+        <div>comments advertising</div>
+      </div>
+    </div>
+  {% endif %}
+
+</div>

@@ -1,3 +1,15 @@
+{% set article = {
+  title: 'This is an article about something interesting and meaningfull',
+  category: 'Events',
+  thumb: 'images/article-thumb.jpg',
+  author: {
+    name: 'Jane Doe',
+    avatar: 'images/article-thumb.jpg'
+  },
+  tags: ['tag 1', 'tag 2', 'tag 3', 'tag 1', 'tag 2', 'tag 3', 'tag 1', 'tag 2', 'tag 3', 'tag 1', 'tag 2', 'tag 3']
+} %}
+
+
 <div class="article">
   <div class="container">
     {% include "./content/index.njk" %}

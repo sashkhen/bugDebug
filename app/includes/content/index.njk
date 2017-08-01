@@ -1,0 +1,140 @@
+{% set manual = {
+  title: 'Manual title',
+  date: 'sept 12, 2016',
+  thumb: 'images/article-thumb.jpg',
+  tags: ['tag 1', 'tag 2', 'tag 3', 'tag 1', 'tag 2', 'tag 3', 'tag 1', 'tag 2', 'tag 3', 'tag 1', 'tag 2', 'tag 3'],
+  blocks: [
+    {
+      title: 'First block title',
+      content: './manual-text.njk'
+    },
+    {
+      title: 'Second block title',
+      content: './manual-media.njk'
+    },
+    {
+      title: 'Third block title',
+      content: './manual-text.njk'
+    }
+  ],
+  related: [
+    {
+      title: 'Related 1 and some long title to test markup',
+      link: 'related1',
+      thumb: 'images/article-thumb.jpg',
+      author: 'Jane Doe',
+      date: 'sept 16, 2016'
+    },
+    {
+      title: 'Related 2',
+      link: 'related2',
+      thumb: 'images/article-thumb.jpg',
+      author: 'John Doe',
+      date: 'sept 16, 2016'
+    },
+    {
+      title: 'Related 1',
+      link: 'related1',
+      thumb: 'images/article-thumb.jpg',
+      author: 'Jane Doe',
+      date: 'sept 16, 2016'
+    },
+    {
+      title: 'Related 2',
+      link: 'related2',
+      thumb: 'images/article-thumb.jpg',
+      author: 'John Doe',
+      date: 'sept 16, 2016'
+    },
+    {
+      title: 'Related 1',
+      link: 'related1',
+      thumb: 'images/article-thumb.jpg',
+      author: 'Jane Doe',
+      date: 'sept 16, 2016'
+    },
+    {
+      title: 'Related 2',
+      link: 'related2',
+      thumb: 'images/article-thumb.jpg',
+      author: 'John Doe',
+      date: 'sept 16, 2016'
+    }
+  ]
+} %}
+
+{% set article = {
+  title: 'Article title kjdbvjw k vwe vouwe v; a awir viawu rviuawbrv uiwr viuaw rviu wa;riv',
+  author: {
+    name: 'Jane Doe',
+    avatar: 'images/article-thumb.jpg'
+  },
+  category: 'Category 1',
+  date: 'sept 12, 2016',
+  thumb: 'images/article-thumb.jpg',
+  tags: ['tag 1', 'tag 2', 'tag 3', 'tag 1', 'tag 2', 'tag 3', 'tag 1', 'tag 2', 'tag 3', 'tag 1', 'tag 2', 'tag 3'],
+  blocks: [
+    {
+      title: 'First block title',
+      content: './manual-text.njk'
+    },
+    {
+      title: 'Second block title',
+      content: './manual-media.njk'
+    },
+    {
+      title: 'Third block title',
+      content: './manual-text.njk'
+    }
+  ],
+  related: [
+    {
+      title: 'Related 1 and some long title to test markup',
+      link: 'related1',
+      thumb: 'images/article-thumb.jpg',
+      author: 'Jane Doe',
+      date: 'sept 16, 2016'
+    },
+    {
+      title: 'Related 2',
+      link: 'related2',
+      thumb: 'images/article-thumb.jpg',
+      author: 'John Doe',
+      date: 'sept 16, 2016'
+    },
+    {
+      title: 'Related 1',
+      link: 'related1',
+      thumb: 'images/article-thumb.jpg',
+      author: 'Jane Doe',
+      date: 'sept 16, 2016'
+    },
+    {
+      title: 'Related 2',
+      link: 'related2',
+      thumb: 'images/article-thumb.jpg',
+      author: 'John Doe',
+      date: 'sept 16, 2016'
+    },
+    {
+      title: 'Related 1',
+      link: 'related1',
+      thumb: 'images/article-thumb.jpg',
+      author: 'Jane Doe',
+      date: 'sept 16, 2016'
+    },
+    {
+      title: 'Related 2',
+      link: 'related2',
+      thumb: 'images/article-thumb.jpg',
+      author: 'John Doe',
+      date: 'sept 16, 2016'
+    }
+  ]
+} %}
+
+{% macro render(item, type) %}
+  {% include './template.njk' %}
+{% endmacro %}
+
+{{ render(manual, 'manual') }}

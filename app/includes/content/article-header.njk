@@ -1,0 +1,15 @@
+<div class="article__header">
+  <div class="article__header__background"
+    style="background-image:url({{item.thumb}})">
+    <div class="article__header__blur"></div>
+  </div>
+  <div class="container article__header__content">
+    <p class="article__category">{{ item.category }}</p>
+    <h1 class="article__title">{{ item.title }}</h1>
+    <div class="article__author">
+      <div class="author__avatar"
+        style="background-image:url({{item.author.avatar}})"></div>
+      <p class="author__name">{{ item.author.name }}</p>
+    </div>
+  </div>
+</div>

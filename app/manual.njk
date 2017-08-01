@@ -1,5 +1,7 @@
+{% import "./includes/content/index.njk" as content %}
+
 {% extends "index.njk" %}
 
 {% block page %}
-  {% include "includes/manual/index.njk" %}
+  {{ content.render(content.manual, 'manual') }}
 {% endblock %}

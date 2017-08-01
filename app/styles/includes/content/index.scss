@@ -1,0 +1,12 @@
+.content {
+  @import './grid';
+  @import './manual-header';
+  @import './article-header';
+  @import './manual-background';
+  @import './manual-side-nav';
+  @import './wrapper';
+  @import './manual-block';
+
+  position: relative;
+  background-color: $grayLight;
+}
