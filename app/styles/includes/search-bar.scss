@@ -1,4 +1,5 @@
 .search-bar {
+  padding: 0 0 0 20px;
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
@@ -47,6 +48,26 @@
       &::placeholder {
         color: $grayish;
       }
+    }
+  }
+
+  @include mobile {
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 4px;
+    background-color: $white;
+
+    .input--search {
+      display: flex;
+      font-size: 16px;
+    }
+
+    .icon {
+      padding: 0 10px;
+    }
+
+    .icon-close {
+      display: none;
     }
   }
 }

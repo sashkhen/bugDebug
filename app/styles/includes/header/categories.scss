@@ -1,12 +1,31 @@
 .categories {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: nowrap;
 
   overflow: hidden;
   color: $grayishBrown;
+
+  @include mobile {
+    width: 100%;
+    padding: 10px 0 0;
+    font-size: 18px;
+  }
 }
 
-.categories__item {}
+.categories__link {
+  @include mobile {
+    display: block;
+    padding: 15px 0;
+  }
+}
 
-.categories__link {}
+.categories__item {
+  @include mobile {
+    border-bottom: 1px solid $gray;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}

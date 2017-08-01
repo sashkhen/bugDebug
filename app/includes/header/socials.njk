@@ -21,14 +21,12 @@
   }
 ] %}
 
-<div class="h--primary__item">
-  <ul class="socials">
-    {% for social in socials %}
-      <li class="socials__item">
-        <a href={{social.link}} target="_blank" class="socials__link">
-          <i class="icon icon-{{social.icon}}"></i>
-        {{social.name}}</a>
-      </li>
-    {% endfor %}
-  </ul>
-</div>
+<ul class="socials">
+  {% for social in socials %}
+    <li class="socials__item">
+      <a href={{social.link}} target="_blank" class="socials__link">
+        <i class="icon icon-{{social.icon}}"></i>
+      {{social.name}}</a>
+    </li>
+  {% endfor %}
+</ul>

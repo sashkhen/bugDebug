@@ -1,5 +1,9 @@
 .h--primary {
   padding: 40px 0;
+
+  @include mobile {
+    padding: 10px 0;
+  }
 }
 
 .h--primary__wrapper {

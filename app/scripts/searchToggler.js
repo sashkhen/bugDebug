@@ -1,6 +1,7 @@
 $(window).load(function() {
 
   var DURATION = 300;
+  var TABLET_WIDTH = 768;
 
   var blogNav = $('.js-blog-nav');
   var categories = blogNav.find('.js-categories');
@@ -14,6 +15,8 @@ $(window).load(function() {
 
   toggler.click(toggleSearch);
 
+  $(window).resize(updateOnResize);
+
   function activateSearch() {
     input.focus();
   }
@@ -23,6 +26,10 @@ $(window).load(function() {
   }
 
   function toggleSearch() {
+
+    var isMobile = window.innerWidth < TABLET_WIDTH;
+    if (isMobile) return false;
+
     const action = isActive ? 'removeClass' : 'addClass';
     const categoriesWidth = isActive ? categoriesInitialWidth : 0;
     const searchWidth = isActive ? togglerWidth : '100%';
@@ -32,5 +39,17 @@ $(window).load(function() {
     updateWidth(searchBar, searchWidth, activateSearch);
 
     isActive = !isActive;
+  }
+
+  function updateOnResize() {
+    var isMobile = window.innerWidth < TABLET_WIDTH;
+
+    if (isMobile && isActive) {
+      categories.removeAttr('style');
+      searchBar.removeAttr('style');
+      searchBar.removeClass('js-active');
+
+      isActive = !isActive;
+    };
   }
 });

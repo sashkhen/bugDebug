@@ -1,28 +1,8 @@
-{% set categories = [
-  {
-    name: 'events',
-    link: '#events'
-  },
-  {
-    name: 'happenings',
-    link: '#happenings'
-  },
-  {
-    name: 'people',
-    link: '#people'
-  },
-  {
-    name: 'places',
-    link: '#places'
-  },
-  {
-    name: 'manuals',
-    link: '#manuals'
-  }
-] %}
-
 <div class="h--secondary">
   <div class="container h--secondary__wrapper js-blog-nav">
+    <div class="logo h--secondary__item h--secondary__item--fixed">
+      <img src={{logo}} class="logo__image">
+    </div>
     {% include "./categories.njk" %}
     {% include "./search.njk" %}
   </div>

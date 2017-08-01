@@ -1,21 +1,14 @@
-{% set data = {
-  logo: {
-    image: 'images/logo.svg',
-    text: 'bugDebug'
-  },
-  auth: {
-    signIn: 'Sign In',
-    signUp: 'Sign Up',
-    signOut: 'Log out',
-    loggedIn: false
-  }
-} %}
-
 <div class="h--primary">
   <div class="container h--primary__wrapper">
+  <div class="h--primary__item">
     {% include "./socials.njk" %}
+    <a class="menu h--primary__item js-menu">
+      <i class="icon icon-menu"></i>
+      <i class="icon icon-close"></i>
+    </a>
+  </div>
     <div class="logo h--primary__item">
-      <img src={{data.logo.image}} alt={{data.logo.text}} class="logo__image">
+      <img src={{logo}} class="logo__image">
     </div>
     {% include "./auth.njk" %}
   </div>

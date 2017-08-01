@@ -1,3 +1,36 @@
+{% set logo = 'images/logo.svg' %}
+
+{% set categories = [
+  {
+    name: 'events',
+    link: '#events'
+  },
+  {
+    name: 'happenings',
+    link: '#happenings'
+  },
+  {
+    name: 'people',
+    link: '#people'
+  },
+  {
+    name: 'places',
+    link: '#places'
+  },
+  {
+    name: 'manuals',
+    link: '#manuals'
+  }
+] %}
+
+{% set auth = {
+  signIn: 'Sign In',
+  signOut: 'Log out',
+  loggedIn: false
+} %}
+
+{% set search = 'Search...' %}
+
 <header class="header js-header">
   {% include "./primary.njk" %}
   {% include "./secondary.njk" %}
