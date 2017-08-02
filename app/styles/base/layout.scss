@@ -17,6 +17,14 @@
   flex: 1 1 auto;
 }
 
+.header {
+  ~ .content {
+    @include mobile {
+      margin-top: 74px!important;
+    }
+  }
+}
+
 .container {
   position: relative;
   max-width: $widthDesktop + $paddingDesktop * 2;

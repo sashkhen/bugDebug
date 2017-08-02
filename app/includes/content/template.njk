@@ -1,6 +1,7 @@
 {% import "../share/index.njk" as share %}
 {% import "../tags/index.njk" as tags %}
 {% import "../related/index.njk" as related %}
+{% import "../comments/index.njk" as comments %}
 
 <div class="content">
 
@@ -28,11 +29,9 @@
           {% endfor %}
         </ul>
       {% else %}
-        <div>article</div>
-      {% endif %}
-
-      {% if type !== 'manual' %}
-        <div>article authors</div>
+        <div class="article__wrapper">
+          {% include "./article-test.njk" %}
+        </div>
       {% endif %}
 
       {% if item.tags %}
@@ -48,28 +47,27 @@
       {% if type === 'manual' %}
         {% include "./manual-side-nav.njk" %}
       {% else %}
-        <div>advertising</div>
+        {{ addAdvert() }}
       {% endif %}
 
     </div>
   </div>
-  {% if item.related %}
 
-    <div class="container">
+  <div class="container">
+
+    {% if item.related %}
       {{ related.render(item.related) }}
-    <div class="container">
+    {% endif %}
 
-  {% endif %}
-
-  {% if type !== 'manual' %}
-    <div class="container grid">
-      <div class="grid__item">
-        <div>comments</div>
+    {% if type !== 'manual' %}
+      <div class="grid">
+        <div class="grid__item">
+          {{ comments.renderCommentsBlock(comments.commentsList) }}
+        </div>
+        <div class="grid__item grid__item--fixed">
+          {{ addAdvert() }}
+        </div>
       </div>
-      <div class="grid__item grid__item--fixed">
-        <div>comments advertising</div>
-      </div>
-    </div>
-  {% endif %}
+    {% endif %}
 
 </div>

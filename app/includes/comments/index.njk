@@ -1,0 +1,41 @@
+{% set commentsList = [
+  {
+    avatar: 'images/article-thumb.jpg',
+    name: 'John Doe',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur unde optio aspernatur sed magni nobis ipsam ipsum vel vero? Eaque sint nisi vel in cumque aliquam quidem maiores voluptatem accusantium.',
+    date: 'sept 16, 2016',
+    replies: [
+      {
+        avatar: 'images/article-thumb.jpg',
+        name: 'Jane Doe',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur unde optio aspernatur sed magni nobis ipsam ipsum vel vero? Eaque sint nisi vel in cumque aliquam quidem maiores voluptatem accusantium.',
+        date: 'sept 16, 2016'
+      },
+      {
+        avatar: 'images/article-thumb.jpg',
+        name: 'Jack Doe',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur unde optio aspernatur sed magni nobis ipsam ipsum vel vero? Eaque sint nisi vel in cumque aliquam quidem maiores voluptatem accusantium.',
+        date: 'sept 16, 2016'
+      }
+    ]
+  },
+  {
+    avatar: 'images/article-thumb.jpg',
+    name: 'Jane Doe',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur unde optio aspernatur sed magni nobis ipsam ipsum vel vero? Eaque sint nisi vel in cumque aliquam quidem maiores voluptatem accusantium.',
+    date: 'sept 16, 2016'
+  }
+] %}
+
+{% set title = 'Comments' %}
+{% set action = 'Reply' %}
+{% set loggedIn = true %}
+{% set message = 'register to leave comments' %}
+
+{% macro render(list) %}
+  {% include './template.njk' %}
+{% endmacro %}
+
+{% macro renderCommentsBlock(list) %}
+  {% include './block.njk' %}
+{% endmacro %}

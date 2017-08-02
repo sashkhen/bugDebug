@@ -6,15 +6,15 @@
   blocks: [
     {
       title: 'First block title',
-      content: './manual-text.njk'
+      content: './manual-test-text.njk'
     },
     {
       title: 'Second block title',
-      content: './manual-media.njk'
+      content: './manual-test-media.njk'
     },
     {
       title: 'Third block title',
-      content: './manual-text.njk'
+      content: './manual-test-text.njk'
     }
   ],
   related: [
@@ -73,20 +73,6 @@
   date: 'sept 12, 2016',
   thumb: 'images/article-thumb.jpg',
   tags: ['tag 1', 'tag 2', 'tag 3', 'tag 1', 'tag 2', 'tag 3', 'tag 1', 'tag 2', 'tag 3', 'tag 1', 'tag 2', 'tag 3'],
-  blocks: [
-    {
-      title: 'First block title',
-      content: './manual-text.njk'
-    },
-    {
-      title: 'Second block title',
-      content: './manual-media.njk'
-    },
-    {
-      title: 'Third block title',
-      content: './manual-text.njk'
-    }
-  ],
   related: [
     {
       title: 'Related 1 and some long title to test markup',
@@ -135,6 +121,10 @@
 
 {% macro render(item, type) %}
   {% include './template.njk' %}
+{% endmacro %}
+
+{% macro addAdvert() %}
+  <div class="content__ad"></div>
 {% endmacro %}
 
 {{ render(manual, 'manual') }}
