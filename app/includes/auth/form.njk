@@ -1,5 +1,6 @@
 <div class="auth--form__wrapper">
   <form class="auth--form">
+
     {% for field in form.fields %}
       <div class="auth--form__field">
         <input
@@ -11,10 +12,12 @@
         />
       </div>
     {% endfor %}
+
     <div class="auth--form__action">
       <button type="submit" class="btn">
         {{form.submit}}
       </button>
     </div>
+
   </form>
 </div>

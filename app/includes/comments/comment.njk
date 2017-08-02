@@ -1,21 +1,26 @@
 <div class="comments__item">
+
   <div class="comments__avatar">
     <div class="comments__avatar__wrapper"
       style="background-image:url({{item.avatar}})">
     </div>
   </div>
+
   <div>
     <div class="comments__body">
       <p class="comments__author">{{ item.name }}</p>
       <p class="comments__text">{{ item.text }}</p>
+
       <div class="comments__footer">
         <span class="comments__date">{{ item.date }}</span>
         <span class="comments__action">{{ action }}</span>
       </div>
+
       <div class="comments__reply">
         <textarea name="reply" class="comments__textarea"></textarea>
       </div>
     </div>
+
     {% if item.replies %}
       {{ render(item.replies) }}
     {% endif %}

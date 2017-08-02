@@ -1,0 +1,21 @@
+.quote {
+  margin: 30px;
+  padding: 20px 60px;
+  box-shadow: 0 0 10px 0 rgba($black, .1);
+  background-color: $white;
+  border-left: 2px solid $rouge;
+}
+
+.quote__text {
+  margin: 0 0 10px;
+  font-style: italic;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.36;
+}
+
+.quote__author {
+  margin: 0;
+  font-style: italic;
+  font-size: 12px;
+}

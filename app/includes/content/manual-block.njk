@@ -1,6 +1,6 @@
-<li
-  id="{{ block.title | replace(' ', '') | lower }}"
-  class="manual__block">
+<li class="manual__block"
+  id="{{ block.title | replace(' ', '') | lower }}">
+
   <div class="block__counter">{{ loop.index }}</div>
   <div class="block__title">
     {{ block.title }}
@@ -8,4 +8,5 @@
   <div class="block__content">
     {% include block.content %}
   </div>
+
 </li>

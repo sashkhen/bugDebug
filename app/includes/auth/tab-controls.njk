@@ -1,10 +1,12 @@
 <div class="tabs__controls">
   {% for tab in tabs %}
+
     {% set activeClass = 'active' if loop.first else '' %}
 
     <div data-id="{{loop.index}}"
       class="tabs__controls__item js-tab {{activeClass}}">
       {{tab.name}}
     </div>
+
   {% endfor %}
 </div>

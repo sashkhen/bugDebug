@@ -1,15 +1,19 @@
 <div class="h--primary">
   <div class="container h--primary__wrapper">
-  <div class="h--primary__item">
-    {% include "./socials.njk" %}
-    <a class="menu h--primary__item js-menu">
-      <i class="icon icon-menu"></i>
-      <i class="icon icon-close"></i>
-    </a>
-  </div>
+
+    <div class="h--primary__item">
+      {% include "./socials.njk" %}
+      <a class="menu h--primary__item js-menu">
+        <i class="icon icon-menu"></i>
+        <i class="icon icon-close"></i>
+      </a>
+    </div>
+
     <div class="logo h--primary__item">
       <img src={{logo}} class="logo__image">
     </div>
+
     {% include "./auth.njk" %}
+
   </div>
 </div>

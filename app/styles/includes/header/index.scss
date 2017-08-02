@@ -11,57 +11,9 @@
   @import './categories';
 }
 
-@import './logo';
-
 .menu {
   font-size: 16px;
 }
 
-.header {
-  .menu {
-    display: none;
-  }
-  @include mobile {
-    background-color: $grayMedium;
-    color: $grayishBrown;
-
-    .menu {
-      display: inline-block;
-      .icon-close {
-        display: none;
-      }
-      .icon-menu {
-        display: inline-block;
-      }
-    }
-
-    .h--secondary {
-      display: none;
-    }
-
-    &.js-opened {
-      .menu {
-        .icon-close {
-          display: inline-block;
-        }
-        .icon-menu {
-          display: none;
-        }
-      }
-
-      .h--secondary {
-        display: block;
-        padding: 20px 0 0;
-      }
-
-      .h--secondary__wrapper {
-        flex-direction: column-reverse;
-      }
-
-      .categories {
-        flex-direction: column;
-      }
-    }
-
-  }
-}
+@import './logo';
+@import './mobile';

@@ -1,6 +1,7 @@
 .article__header {
   position: relative;
 }
+
 .article__header__background {
   position: absolute;
   top: 0;
@@ -11,6 +12,7 @@
   background-size: cover;
   background-position: center center;
 }
+
 .article__header__blur {
   position: absolute;
   top: 0;
@@ -20,6 +22,7 @@
 
   background: linear-gradient(to bottom, transparent, $grayLight);
 }
+
 .article__header__content {
   padding: 70px 0 0;
   text-align: center;
@@ -32,6 +35,7 @@
     padding: 200px 0 0;
   }
 }
+
 .article__category {
   display: inline-block;
   margin: 0 0 30px;
@@ -40,6 +44,7 @@
   background-color: $rouge;
   font-size: 14px;
 }
+
 .article__title {
   max-width: 700px;
   margin: 0 auto 30px;
@@ -53,13 +58,13 @@
     font-size: 20px;
   }
 }
+
 .article__author {
   @include mobile {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-
 
   .author__avatar {
     width: 40px;
@@ -78,6 +83,7 @@
       height: 20px;
     }
   }
+
   .author__name {
     color: $grayishBrown;
     font-size: 12px;

@@ -49,3 +49,8 @@ textarea {
   outline: none;
   font-family: $fontPrimary;
 }
+
+body.lock {
+  height: 100vh;
+  overflow: hidden;
+}

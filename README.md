@@ -2,7 +2,30 @@
 
 blog template
 
-## build with
+## Pages
+
+- [Articles Listing (homepage)](app/articles-list.njk)
+- [Article Example](app/article.njk)
+- [Manuals Listing](app/manuals-list.njk)
+- [Manual Example](app/manual.njk)
+
+Static strings are stored in /app/includes/[partial]/index.njk files, alongside with temp data and variables.
+
+## To Do:
+
+- manual list scroll spy
+- article carousel
+- article common elements styling
+- reply toggler
+- comment submit
+- check article responsive
+- check auth popup responsive
+- check responsive typography
+- read also block (article) (mobile)
+- loader (articles list)
+- popup background
+
+## Build with
 
 Yeoman's [Web app generator](https://github.com/yeoman/generator-webapp)
 

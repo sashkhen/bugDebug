@@ -1,9 +1,13 @@
 <div class="comments__form">
   {% if loggedIn %}
+
     <form action="POST">
       <textarea name="comment" class="comments__textarea"></textarea>
     </form>
+
   {% else %}
+
     <p class="comments__message">{{ message }}</p>
+
   {% endif %}
 </div>
