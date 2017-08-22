@@ -17,6 +17,9 @@
   .navigation {
     display: flex;
     justify-content: space-around;
+    // max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
     color: $white;
 
     @include mobile {
@@ -24,6 +27,7 @@
     }
 
     .navigation__item {
+      flex: 0 0 auto;
       text-transform: uppercase;
       font-size: 18px;
     }

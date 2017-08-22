@@ -17,3 +17,18 @@
 .cursive {
   font-style: italic;
 }
+
+.reference {
+  margin: 50px 0 30px;
+  color: $grayish;
+  font-size: 18px;
+  line-height: 1;
+
+  p {
+    margin: 0;
+  }
+
+  .reference-title {
+    font-style: italic;
+  }
+}

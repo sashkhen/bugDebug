@@ -14,12 +14,18 @@
   }
 
   .content__ad {
-    @include desktop {
-      width: 240px;
-      height: 360px;
-      margin: 0 0 0 30px;
-      border: 1px solid rgba($black, .4);
-      background-color: rgba($black, .3);
+    width: 240px;
+    height: 360px;
+    margin: 0 0 0 30px;
+    border: 1px solid rgba($black, .4);
+    background-color: rgba($black, .3);
+
+    @include tabletPortrait {
+      display: none;
+    }
+
+    @include mobile {
+      display: none;
     }
   }
 }

@@ -10,6 +10,12 @@
   }
 }
 
+@mixin tabletPortrait {
+  @media only screen and (min-width: #{$mobileWidth + 1px}) and (max-width: #{$tabletWidth}) and (orientation: portrait) {
+    @content;
+  }
+}
+
 @mixin mobile {
   @media only screen and (max-width: #{$mobileWidth}) {
     @content;

@@ -9,8 +9,8 @@ $(window).load(function() {
   var toggler = searchBar.find('.js-toggler');
   var input = searchBar.find('.js-input');
 
-  var categoriesInitialWidth = categories.outerWidth();
-  var togglerWidth = searchBar.width();
+  var categoriesInitialWidth = categories.outerWidth(true);
+  var togglerWidth = searchBar.outerWidth(true);
   var isActive = false;
 
   toggler.click(toggleSearch);

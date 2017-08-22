@@ -1,5 +1,6 @@
 .article__wrapper {
   color: $grayishBrown;
+
   @include mobile {
     padding: 20px 0 0;
   }
@@ -8,7 +9,6 @@
   @import './typography';
   @import './media';
   @import './quote';
-  @import './carousel';
 
   h1, h2, h3, h4, h5, h6, p, span {
     @include mobile {
@@ -16,3 +16,5 @@
     }
   }
 }
+
+@import './carousel';

@@ -1,0 +1,37 @@
+.related__floating {
+  margin: 0 0 0 30px;
+  position: absolute;
+  bottom: 1000px; // this is a magic num for particular article
+
+  @include tabletPortrait {
+    display: none;
+  }
+
+  @include mobile {
+    display: none;
+  }
+
+  .floating__title {
+    margin: 0 0 10px;
+    padding: 0 0 10px;
+    border-bottom: 1px solid $grayish;
+    color: $grayishBrown;
+    font-size: 14px;
+  }
+  .related__body {}
+  .related__thumb {
+    margin: 0 0 20px;
+    height: 114px;
+    background-size: cover;
+    background-position: center center;
+  }
+  .related__title {
+    color: $rouge;
+    font-size: 14px;
+  }
+  .related__author {
+    color: $grayishBrown;
+    font-size: 12px;
+    font-style: italic;
+  }
+}

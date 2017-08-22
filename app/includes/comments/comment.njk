@@ -13,11 +13,11 @@
 
       <div class="comments__footer">
         <span class="comments__date">{{ item.date }}</span>
-        <span class="comments__action">{{ action }}</span>
+        <button type="button" class="comments__action js-reply-toggler">{{ action }}</button>
       </div>
 
       <div class="comments__reply">
-        <textarea name="reply" class="comments__textarea"></textarea>
+        <textarea name="reply" class="comments__textarea js-comment"></textarea>
       </div>
     </div>
 

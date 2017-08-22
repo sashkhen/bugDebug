@@ -14,14 +14,9 @@ Static strings are stored in /app/includes/[partial]/index.njk files, alongside 
 ## To Do:
 
 - manual list scroll spy
-- article carousel
-- article common elements styling
-- reply toggler
-- comment submit
 - check article responsive
 - check auth popup responsive
 - check responsive typography
-- read also block (article) (mobile)
 - loader (articles list)
 - popup background
 

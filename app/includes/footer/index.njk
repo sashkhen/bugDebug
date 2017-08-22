@@ -1,21 +1,45 @@
-{% set data = {
-  logo: {
-    image: 'images/logo.svg',
-    text: 'bugDebug'
-  }
+{% set logo = {
+  image: 'images/logo.svg',
+  text: 'bugDebug'
 } %}
+
+{% set navigation = [
+  {
+    name: 'О проекте',
+    link: '#about'
+  },
+  {
+    name: 'Контакты',
+    link: '#contacts'
+  },
+  {
+    name: 'Соглашения и правила',
+    link: '#terms-and-conditions'
+  },
+  {
+    name: 'Правообладателям',
+    link: '#privacy-policy'
+  },
+  {
+    name: 'Рекламодателям',
+    link: '#presskit'
+  }
+] %}
+
+{% set copyrights = 'Copyright 2016. Bug Debug - All Rights Reserved' %}
+
 
 <footer class="footer">
   <div class="container">
     <div class="logo footer__item">
-      <img src={{data.logo.image}} alt={{data.logo.text}} class="logo__image">
+      <img src={{logo.image}} alt={{logo.text}} class="logo__image">
     </div>
 
     {% include "./navigation.njk" %}
     {% include "../header/socials.njk" %}
 
     <div class="footer__item">
-      <p>Copyright Lorem ipsum dolor sit amet.</p>
+      <p>{{ copyrights }}</p>
     </div>
   </div>
 </footer>

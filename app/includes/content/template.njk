@@ -1,6 +1,7 @@
 {% import "../share/index.njk" as share %}
 {% import "../tags/index.njk" as tags %}
 {% import "../related/index.njk" as related %}
+{% import "../related-floating/index.njk" as relatedFloating %}
 {% import "../comments/index.njk" as comments %}
 
 <div class="content">
@@ -48,6 +49,8 @@
         {% include "./manual-side-nav.njk" %}
       {% else %}
         {{ addAdvert() }}
+        {{ relatedFloating.render(item.related[0]) }}
+        <div class="js-slider-nav"></div>
       {% endif %}
 
     </div>

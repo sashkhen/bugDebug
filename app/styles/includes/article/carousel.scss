@@ -1,3 +1,166 @@
+// Slick
+
+.slick-dots {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex!important;
+  flex-wrap: nowrap;
+  width: 100%;
+
+  li {
+    flex: 1 1 auto;
+    padding: 0 3px 0 0;
+    background-color: $grayLight;
+
+    &:last-child {
+      padding: 0;
+    }
+
+    button {
+      color: $grayish;
+      background-color: $grayish;
+      border: none;
+      overflow: hidden;
+      height: 3px;
+      width: 100%;
+      transition: color .3s ease-out, background-color .3s ease-out;
+    }
+
+    &.slick-active {
+      button {
+        color: $rouge;
+        background-color: $rouge;
+      }
+    }
+  }
+}
+
+.slick-slide {
+  img {
+    margin: 10px 0;
+  }
+}
+
+.slick-list {
+}
+
+.slick-prev,
+.slick-next {
+  border: none;
+  background-color: transparent;
+  color: $grayish;
+  font-weight: bold;
+  transition: color .3s ease-out;
+
+  &:hover {
+    color: $rouge;
+  }
+}
+
+.slick-prev {
+  &::after {
+    content: '\2190';
+  }
+}
+
+.slick-next {
+  &::after {
+    content: '\2192';
+  }
+}
+
+// additional elements
+
+.slider {
+  img {
+    margin: 10px 0;
+  }
+}
+
 .carousel {
-  margin: 80px 0 30px;
+  margin: 0 0 50px;
+
+  @include tabletPortrait {
+    background-color: $grayMedium;
+  }
+
+  @include mobile {
+    background-color: $grayMedium;
+  }
+
+  .js-slider-nav {
+    display: none;
+    margin: 0;
+    padding: 0 30px 30px;
+    position: relative;
+    top: 0!important;
+    text-align: center;
+
+    .slider-nav {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+
+      > * {
+        flex: 0 0 auto;
+
+        &:last-child {
+          flex: 1 1 auto;
+          text-align: right;
+        }
+
+        &:first-child {
+          flex: 1 1 auto;
+          text-align: left;
+        }
+      }
+    }
+
+    @include tabletPortrait {
+      display: block;
+    }
+
+    @include mobile {
+      display: block;
+    }
+  }
+
+  > .description {
+    display: none;
+  }
+}
+
+.js-slider-nav {
+  display: block;
+  position: absolute;
+  margin: 0 0 0 30px;
+  color: $grayish;
+  font-size: 30px;
+
+  @include tabletPortrait {
+    display: none;
+  }
+
+  @include mobile {
+    display: none;
+  }
+
+  .counter {
+    display: inline-block;
+    margin: 0 20px;
+
+    span {
+      display: inline-block;
+      margin: 0 5px;
+    }
+  }
+
+  .description {
+    margin: 10px 0 0 0;
+    color: $grayishBrown;
+    font-style: italic;
+    font-size: 14px;
+    line-height: 1.5;
+  }
 }
