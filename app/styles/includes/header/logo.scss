@@ -18,3 +18,9 @@
     max-width: 100px;
   }
 }
+
+.closed {
+  .logo.h--secondary__item {
+    display: block;
+  }
+}

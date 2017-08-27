@@ -53,4 +53,16 @@ textarea {
 body.lock {
   height: 100vh;
   overflow: hidden;
+
+  @include tabletPortrait {
+    height: auto;
+    min-height: 100vh;
+    overflow: auto;
+  }
+
+  @include mobile {
+    height: auto;
+    min-height: 100vh;
+    overflow: auto;
+  }
 }

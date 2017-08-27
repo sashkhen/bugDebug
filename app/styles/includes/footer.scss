@@ -3,6 +3,12 @@
   background-color: $grayishBrown;
   color: $grayish;
 
+  > .container {
+    @include tabletPortrait {
+      padding: 0;
+    }
+  }
+
   .footer__item {
     display: block;
     width: 100%;
@@ -49,6 +55,7 @@
 
   .socials {
     display: none;
+    padding: 0 0 0 20px;
 
     @include mobile {
       display: block;
@@ -63,7 +70,6 @@
         &:hover {
           color: $white;
         }
-
       }
     }
   }

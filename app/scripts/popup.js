@@ -1,24 +1,36 @@
 $(window).load(function() {
 
+  var POPUP_SELECTOR = '.js-popup';
+
   var layout = $('body');
-  var popup = $('.js-popup');
+  var popup = $(POPUP_SELECTOR);
   var toggler = $('.js-auth');
   var isVisible = false;
 
-  toggler.click(showPopup);
+  createMobileClone();
+
+  toggler.click(togglePopup);
   popup.click(handleClickOutside);
 
-  function showPopup() {
-    popup.show();
-    layout.addClass('lock');
+  function togglePopup() {
+    var action = isVisible ? 'removeClass' : 'addClass';
+    layout[action]('lock');
+
     isVisible = !isVisible;
   };
 
   function handleClickOutside(e) {
     if (e.target == this) {
-      $(this).hide();
       layout.removeClass('lock');
       isVisible = !isVisible;
     }
+  }
+
+  function createMobileClone() {
+    var popup = document.querySelector(POPUP_SELECTOR),
+        mobilePopup = popup.cloneNode(true),
+        content = document.querySelector('.content');
+
+    content.after(mobilePopup);
   }
 });

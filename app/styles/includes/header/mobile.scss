@@ -51,4 +51,32 @@
       }
     }
   }
+
+  .auth .auth__toggler {
+    display: none;
+  }
+}
+
+
+// close button for auth popup
+.lock {
+  .header .auth .auth__toggler {
+    @include tabletPortrait {
+      display: block;
+    }
+
+    @include mobile {
+      display: block;
+    }
+  }
+
+  .header .auth .auth__link {
+    @include tabletPortrait {
+      display: none;
+    }
+
+    @include mobile {
+      display: none;
+    }
+  }
 }

@@ -1,12 +1,9 @@
+// Both mobile and desktop auth popups
+
+// common
 .popup {
   display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 2;
-  background-color: rgba($black, .5);
+  flex: 1 1 auto;
 }
 
 .popup__container {
@@ -16,3 +13,51 @@
   padding: 40px;
   background-color: $grayLight;
 }
+
+// desktop
+body > .popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  background-color: rgba($black, .5);
+
+  @include tabletPortrait {
+    display: none!important;
+  }
+
+  @include mobile {
+    display: none!important;
+  }
+}
+
+// dektop active
+.lock > .popup {
+  display: block;
+}
+
+// mobile
+.layout > .popup {
+  @include desktop {
+    display: none!important;
+  }
+
+  @include tablet {
+    display: none!important;
+  }
+}
+
+// mobile active
+.lock .layout > .popup {
+  @include tabletPortrait {
+    display: block;
+  }
+
+  @include mobile {
+    display: block;
+  }
+}
+
+
