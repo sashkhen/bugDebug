@@ -1,0 +1,35 @@
+.loader__wrapper {
+  display: block;
+  margin: 0 auto 20px;
+  width: auto;
+  text-align: center;
+  color: $grayishBrown;
+
+  .loader {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .loader__icon {
+    display: block;
+    padding: 10px;
+    font-size: 20px;
+
+    .icon {
+      display: block;
+    }
+  }
+  .loader__text {
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+}
+
+.active .loader__icon {
+  animation: spinning 1000ms linear infinite
+}
+
+@keyframes spinning {
+  0%   { transform: rotate(0deg) }
+  100% { transform: rotate(-360deg) }
+}

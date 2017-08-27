@@ -1,5 +1,8 @@
+{% import "./includes/loader.njk" as loader %}
+
 {% extends "index.njk" %}
 
 {% block page %}
   {% include "includes/manuals-list/index.njk" %}
+  {{ loader.render() }}
 {% endblock %}

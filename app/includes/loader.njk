@@ -1,0 +1,14 @@
+{% set text = 'Загрузить еще' %}
+
+{% macro render() %}
+  <div class="loader__wrapper">
+    <a class="loader js-loader">
+      <div class="loader__icon">
+        <i class="icon icon-load"></i>
+      </div>
+      <div class="loader__text">
+        <span>{{ text }}</span>
+      </div>
+    </a>
+  </div>
+{% endmacro %}
