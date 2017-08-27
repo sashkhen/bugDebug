@@ -1,4 +1,4 @@
-.grid {
+.articles__grid {
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
@@ -8,27 +8,27 @@
   @include mobile {
     margin: 0;
   }
-}
 
-.grid__item {
-  flex: 0 0 33.3%;
-  position: relative;
-  padding: 0 30px 30px 0;
-  overflow: hidden;
+  .grid__item {
+    flex: 0 0 33.3%;
+    position: relative;
+    padding: 0 30px 30px 0;
+    overflow: hidden;
 
-  @include mobile {
-    flex: 0 0 100%;
-    padding: 0;
+    @include mobile {
+      flex: 0 0 100%;
+      padding: 0;
 
-    &::after {
-      content: '';
-      display: block;
-      margin: 0 20px;
-      border-bottom: 1px solid $grayish;
+      &::after {
+        content: '';
+        display: block;
+        margin: 0 20px;
+        border-bottom: 1px solid $grayish;
+      }
     }
-  }
 
-  &:last-child::after {
-    display: none;
+    &:last-child::after {
+      display: none;
+    }
   }
 }

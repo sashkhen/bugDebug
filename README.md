@@ -13,7 +13,6 @@ Static strings are stored in /app/includes/[partial]/index.njk files, alongside 
 
 ## To Do:
 
-- manual list scroll spy
 - check responsive typography
 
 ## Build with
