@@ -1,13 +1,13 @@
-$(document).ready(function() {
+$(window).load(function() {
 
   // wait for all of the auth components to be initiated
-  setTimeout(initTabs, 100);
+  setTimeout(initTabs, 1000);
 });
 
 function initTabs() {
-  var tabs = $('.js-tabs');
-  var controls = tabs.find('.js-tab');
-  var contents = tabs.find('.js-content');
+  var tabs = $('.js-tabs'),
+      controls = tabs.find('.js-tab'),
+      contents = tabs.find('.js-content');
 
   controls.click(handleClick);
 
@@ -20,8 +20,12 @@ function initTabs() {
   function updateActiveState(elems, activeIndex) {
     clearClasses(elems);
 
-    var active = elems[activeIndex];
-    $(active).addClass('active');
+    // sync both auth tabs pairs
+    var activeMobile = elems[activeIndex],
+        activeDesktop = elems[activeIndex + 2],
+        actives = [activeMobile, activeDesktop];
+
+    $(actives).addClass('active');
   };
 
   function handleClick() {
