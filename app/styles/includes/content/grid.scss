@@ -14,6 +14,9 @@
   position: relative;
   flex: 1 1 auto;
   overflow: hidden;
+  @include desktop {
+    padding: 0 30px;
+  }
 }
 
 .grid__item--fixed {
