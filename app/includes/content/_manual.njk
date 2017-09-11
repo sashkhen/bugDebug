@@ -1,0 +1,42 @@
+{% import "../share/index.njk" as share %}
+{% import "../tags/index.njk" as tags %}
+{% import "../related/index.njk" as related %}
+
+<div class="content content__common">
+
+  {% include "./manual-header.njk" %}
+
+  <div class="container grid">
+    {% include "./manual-background.njk" %}
+
+    <div class="grid__item grid__item--fixed">
+      {{ share.render(share.shareList, 'vertical') }}
+    </div>
+
+    <div class="grid__item">
+
+      <ul class="content__wrapper">
+        {% for block in item.blocks %}
+          {% include "./manual-block.njk" %}
+        {% endfor %}
+      </ul>
+
+      {% if item.tags %}
+        {{ tags.render(item.tags) }}
+      {% endif %}
+
+      {{ share.render(share.shareList, 'horizontal') }}
+
+    </div>
+
+    <div class="grid__item grid__item--fixed">
+      {% include "./manual-side-nav.njk" %}
+    </div>
+  </div>
+
+  <div class="container">
+    {% if item.related %}
+      {{ related.render(item.related) }}
+    {% endif %}
+  </div>
+</div>

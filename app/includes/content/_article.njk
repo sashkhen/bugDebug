@@ -1,0 +1,56 @@
+{% import "../share/index.njk" as share %}
+{% import "../tags/index.njk" as tags %}
+{% import "../related/index.njk" as related %}
+{% import "../related-floating/index.njk" as relatedFloating %}
+{% import "../comments/index.njk" as comments %}
+
+<div class="content content__common">
+
+  {% include "./article-header.njk" %}
+
+  <div class="container grid">
+
+    <div class="grid__item grid__item--fixed">
+      {{ share.render(share.shareList, 'vertical') }}
+    </div>
+
+    <div class="grid__item">
+
+      <div class="article__wrapper">
+        {% include "./article-test.njk" %}
+      </div>
+
+      {% if item.tags %}
+        {{ tags.render(item.tags) }}
+      {% endif %}
+
+      {{ share.render(share.shareList, 'horizontal') }}
+
+    </div>
+
+    <div class="grid__item grid__item--fixed">
+      {{ addAdvert() }}
+      {{ relatedFloating.render(item.related[0]) }}
+      <div class="js-slider-nav"></div>
+    </div>
+  </div>
+
+  <div class="container">
+
+    {% if item.related %}
+      {{ related.render(item.related) }}
+    {% endif %}
+
+    <div class="grid">
+      <div class="grid__item">
+
+        {{ comments.renderCommentsBlock(comments.commentsList) }}
+
+      </div>
+      <div class="grid__item grid__item--fixed">
+        {{ addAdvert() }}
+      </div>
+    </div>
+
+  </div>
+</div>

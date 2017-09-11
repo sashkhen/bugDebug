@@ -119,12 +119,24 @@
   ]
 } %}
 
-{% macro render(item, type) %}
-  {% include './template.njk' %}
-{% endmacro %}
-
+<!-- advert block helper -->
 {% macro addAdvert() %}
   <div class="content__ad"></div>
 {% endmacro %}
 
-{{ render(manual, 'manual') }}
+<!-- common template for article and manual -->
+{% macro render(item, type) %}
+  {% include './template.njk' %}
+{% endmacro %}
+
+<!-- template for manual -->
+{% macro renderManual() %}
+  {% set item = manual %}
+  {% include './_manual.njk' %}
+{% endmacro %}
+
+<!-- template for article -->
+{% macro renderArticle() %}
+  {% set item = article %}
+  {% include './_article.njk' %}
+{% endmacro %}

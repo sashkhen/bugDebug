@@ -3,5 +3,6 @@
 {% extends "index.njk" %}
 
 {% block page %}
-  {{ content.render(content.manual, 'manual') }}
+  <!-- {{ content.render(content.manual, 'manual') }} -->
+  {{ content.renderManual() }}
 {% endblock %}
