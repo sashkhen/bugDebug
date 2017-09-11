@@ -14,7 +14,12 @@
   position: relative;
   flex: 1 1 auto;
   overflow: hidden;
+
   @include desktop {
+    padding: 0 30px;
+  }
+
+  @include tablet {
     padding: 0 30px;
   }
 }
@@ -22,4 +27,8 @@
 .grid__item--fixed {
   flex: 0 0 auto;
   overflow: visible;
+
+  @include tablet {
+    padding: 0;
+  }
 }
