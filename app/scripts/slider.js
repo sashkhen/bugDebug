@@ -30,7 +30,7 @@ $(document).ready(function() {
     lazyLoad: 'ondemand',
     autoplay: true,
     autoplaySpeed: 2000,
-    appendArrows: $(".js-slider-nav"),
+    appendArrows: $('.js-slider-nav'),
     prevArrow: '.slick-prev',
     nextArrow: '.slick-next',
   });

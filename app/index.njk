@@ -4,7 +4,23 @@
   <div class="layout">
     {% include "includes/header/index.njk" %}
     <div class="content">
-      {% block page %}{% endblock %}
+      {% block page %}
+      <div class="container" style="padding-top: 20px;">
+        <h3 style="margin: 0 0 20px; text-transform: uppercase; font-size: 24px;">
+          List of contents:
+        </h3>
+        <ul style="font-size: 20px;">
+          <li style="display: block; margin: 0 0 10px;">
+            <a href="/articles-list.html">Articles list page &rarr;</a></li>
+          <li style="display: block; margin: 0 0 10px;">
+            <a href="/article.html">Article page &rarr;</a></li>
+          <li style="display: block; margin: 0 0 10px;">
+            <a href="/manuals-list.html">Manuals list page &rarr;</a></li>
+          <li style="display: block; margin: 0 0 10px;">
+            <a href="/manual.html">Manual page &rarr;</a></li>
+        </ul>
+      </div>
+      {% endblock %}
     </div>
     {% include "includes/footer/index.njk" %}
   </div>
