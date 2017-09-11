@@ -1,0 +1,24 @@
+<ul>
+<!--   <li>
+    <div class="count"><%= social_count %></div>
+  </li> -->
+  <li>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fyalantis.com%2F&t=" target="_blank" title="Share on Facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;">
+      <i class="icon icon_share_facebook"></i>
+    </a>
+  </li>
+  <li>
+    <a href="https://twitter.com/intent/tweet?source=https%3A%2F%2Fyalantis.com%2F&text=:%20https%3A%2F%2Fyalantis.com%2F" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;">
+      <i class="icon icon_share_twitter"></i>
+    </a>
+  </li>
+  <li>
+    <a href="https://getpocket.com/save?url=https%3A%2F%2Fyalantis.com%2F&title=" target="_blank" title="Add to Pocket" onclick="window.open('https://getpocket.com/save?url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;">
+      <i class="icon icon_share_pocket"></i>
+    </a>
+  </li>
+</ul>
+
+<!-- where "...https%3A%2F%2Fyalantis.com%2F&t=" is a fallback url for sharing -->
+<!-- where @social_count = SocialsShareCount.new(params[:slug]).call -->
+<!-- where SocialsShareCount example in social-share-count.rb -->

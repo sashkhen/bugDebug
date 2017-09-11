@@ -11,10 +11,6 @@ blog template
 
 Static strings are stored in /app/includes/[partial]/index.njk files, alongside with temp data and variables.
 
-## To Do:
-
-- check responsive typography
-
 ## Build with
 
 Yeoman's [Web app generator](https://github.com/yeoman/generator-webapp)
